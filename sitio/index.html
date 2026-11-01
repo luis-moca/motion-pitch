@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arze Media · Short-form video for Toronto restaurants</title>
+<meta name="description" content="Arze Media shoots and edits Reels and TikToks for Toronto restaurants. One shoot day, a month of videos your customers walk in for.">
+<meta name="theme-color" content="#16110F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arze Media · Videos that fill tables">
+<meta property="og:description" content="Short-form video for Toronto restaurants. One shoot day, a month of Reels and TikToks.">
+<meta property="og:image" content="og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css?v=26">
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#top" aria-label="Arze Media, back to top">
+      <img src="logo/arze-play-light.svg" alt="Arze Media" width="150" height="40">
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="work.html">Work</a>
+      <a href="process.html">Process</a>
+      <a href="menu.html">Menu</a>
+      <a href="math.html">The math</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn--rosa btn--sm nav__cta" href="contact.html">Book a shoot</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <nav class="dr__nav" aria-label="Mobile">
+    <a href="work.html"><span class="dr__n">01</span><span class="dr__t">Work<small>The formats</small></span><img src="assets/video/tacoplate.webp" alt="" loading="lazy"></a>
+    <a href="process.html"><span class="dr__n">02</span><span class="dr__t">Process<small>How a shoot works</small></span><img src="assets/img/phonescreen-sm.webp" alt="" loading="lazy"></a>
+    <a href="menu.html"><span class="dr__n">03</span><span class="dr__t">Menu<small>Packages & prices</small></span><img src="assets/video/pasta.webp" alt="" loading="lazy"></a>
+    <a href="math.html"><span class="dr__n">04</span><span class="dr__t">The math<small>Will it pay off?</small></span><img src="assets/video/diner.webp" alt="" loading="lazy"></a>
+    <a href="faq.html"><span class="dr__n">05</span><span class="dr__t">FAQ<small>Good questions</small></span><img src="assets/video/counter.webp" alt="" loading="lazy"></a>
+    <a href="contact.html"><span class="dr__n">06</span><span class="dr__t">Contact<small>Book a shoot</small></span><img src="assets/video/latte.webp" alt="" loading="lazy"></a>
+  </nav>
+  <div class="dr__foot">
+    <a class="btn btn--rosa btn--lg" data-wa href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="btn btn--ghost btn--lg" data-mail href="#"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero band band--night" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <video class="hero__bgvid" muted loop playsinline preload="none" data-src="assets/video/flames.mp4" poster="assets/video/flames.webp"></video>
+    <div class="hero__wall" id="heroWall"></div>
+  </div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="kicker"><span class="rec" aria-hidden="true"></span><span data-copy="hero.kicker"></span></p>
+      <span class="sticker sticker--maiz hero__stk" aria-hidden="true">Shot in<br>one day</span>
+      <h1 class="hero__title" id="heroTitle"></h1>
+      <p class="hero__sub" data-copy="hero.subtitle"></p>
+      <div class="hero__ctas">
+        <a class="btn btn--rosa btn--lg" data-wa href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span data-copy="hero.primaryCta"></span></a>
+        <a class="btn btn--ghost btn--lg" href="#menu" data-copy="hero.secondaryCta"></a>
+      </div>
+      <div class="hero__proof" id="heroProof"></div>
+    </div>
+
+    <div class="hero__phone">
+      <div class="phone" id="phone" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Sample reels. Swipe, drag or use arrow keys. Tap to pause.">
+        <div class="phone__island" aria-hidden="true"></div>
+        <div class="phone__screen" id="phoneScreen">
+          <div class="phone__bars" id="phoneBars" aria-hidden="true"></div>
+          <div class="phone__top" aria-hidden="true"><span>Following</span><b>For You</b></div>
+          <div class="phone__track" id="phoneTrack"></div>
+                    <div class="phone__hint" id="phoneHint" aria-hidden="true"><svg class="ico"><use href="#i-swipe"/></svg><span id="hintTxt">Swipe</span></div>
+          <div class="phone__paused" id="phonePaused" aria-hidden="true"><svg class="ico"><use href="#i-pause"/></svg></div>
+        </div>
+      </div>
+      <div class="phone__nav">
+        <button class="round" id="phonePrev" aria-label="Previous reel"><svg class="ico"><use href="#i-up"/></svg></button>
+        <span class="phone__count" id="phoneCount" aria-live="polite">1 / 6</span>
+        <button class="round" id="phoneNext" aria-label="Next reel"><svg class="ico"><use href="#i-down"/></svg></button>
+      </div>
+      <div class="sticker sticker--maiz" aria-hidden="true">Shot in<br>one day</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE + MARQUEE -->
+<section class="quote band band--rosa" id="proof">
+  <div class="wrap">
+    <p class="quote__eyebrow">The line we want your customers to say</p>
+    <blockquote class="quote__text">
+      <span class="qm" aria-hidden="true">“</span>I came for the video.<span class="qm" aria-hidden="true">”</span>
+    </blockquote>
+    <p class="quote__sub">Not views. People walking through your door and asking for the dish they saw on their phone. That's what every video is made for.</p>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Taquerias</span><span>Bakeries</span><span>Birria spots</span><span>Cafés</span><span>Burger joints</span><span>Pizza</span><span>Cocktail bars</span><span>Food stalls</span>
+      <span>Taquerias</span><span>Bakeries</span><span>Birria spots</span><span>Cafés</span><span>Burger joints</span><span>Pizza</span><span>Cocktail bars</span><span>Food stalls</span>
+    </div>
+  </div>
+</section>
+
+<!-- WORK / FORMATS -->
+<section class="work band band--night" id="work">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The formats</p>
+      <h2><span data-count="formats">Six</span> ways to make <em>your food</em> the star.</h2>
+      <p class="lead">Every restaurant gets a mix of formats that work on Reels and TikTok. Tap any tile to watch it.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+    <p class="fineprint">Sample footage from licensed stock libraries. Your videos will star your own food, team and space.</p>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="ba band band--paper" id="cut">
+  <div class="wrap ba__grid">
+    <div class="ba__copy">
+      <p class="eyebrow eyebrow--ink">The difference</p>
+      <h2>Same tacos.<br>Different <em>result</em>.</h2>
+      <p class="lead lead--ink">A quick phone photo shows the food. A good cut sells it: light, framing, a hook in the first second and captions people can read with the sound off.</p>
+      <ul class="ticks">
+        <li>Hook in the first second</li>
+        <li>Captions for sound-off viewing</li>
+        <li>Colour that makes food look like food</li>
+        <li>Vertical, sized for every platform</li>
+      </ul>
+    </div>
+    <div class="ba__stage" id="ba">
+      <div class="ba__layer ba__after">
+        <img src="assets/img/paperplates-sm.webp" alt="Tacos on paper plates with lime, edited with vivid colour and captions" loading="lazy" width="900" height="1350">
+        <div class="ba__overlay">
+          <span class="ba__hook">3 tacos.<br><b>Zero</b><br>regrets.</span>
+          <span class="ba__cap">Wait for it…</span>
+        </div>
+        <span class="ba__label ba__label--after">After · Arze cut</span>
+      </div>
+      <div class="ba__layer ba__before" id="baBefore">
+        <img src="assets/img/paperplates-sm.webp" alt="" aria-hidden="true" loading="lazy" width="900" height="1350">
+        <span class="ba__label ba__label--before">Before</span>
+      </div>
+      <div class="ba__handle" id="baHandle" role="slider" tabindex="0" aria-label="Compare before and after" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <span class="ba__knob"><svg class="ico"><use href="#i-drag"/></svg></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how band band--night" id="how">
+  <div class="how__pin">
+    <div class="wrap how__head">
+      <p class="eyebrow">Process</p>
+      <h2>One shoot day. <em>A&nbsp;month</em> of content.</h2>
+    </div>
+    <div class="how__track" id="howTrack"></div>
+    <div class="how__dots" id="howDots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu band band--maiz" id="menu">
+  <div class="wrap">
+    <div class="head head--ink">
+      <p class="eyebrow eyebrow--ink">The menu</p>
+      <h2>Pick your <em>order</em>.</h2>
+      <p class="lead lead--ink">Monthly packages, plus a single video to try us out. No long contracts. Tap a dish to see what's inside.</p>
+    </div>
+    <div class="board">
+      <div class="board__sign" aria-hidden="true">
+        <span>Arze</span><span class="board__dot"></span><span>Video Menu</span>
+      </div>
+      <div class="board__body">
+        <ul class="board__list" id="menuList" role="tablist" aria-label="Packages"></ul>
+        <div class="board__detail" id="menuDetail" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </div>
+    <p class="fineprint fineprint--ink">Prices in <span data-copy="currency"></span>, plus tax. Extra videos and custom projects on request.</p>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section class="math band band--paper" id="math">
+  <div class="wrap">
+    <div class="head head--ink">
+      <p class="eyebrow eyebrow--ink">The math</p>
+      <h2>Will it <em>pay for itself</em>?</h2>
+      <p class="lead lead--ink">We don't promise views. Here's the honest break-even: how many new customers a month cover the package, using your own numbers.</p>
+    </div>
+    <div class="sim">
+      <div class="sim__inputs">
+        <fieldset class="sim__pkgs">
+          <legend>Package</legend>
+          <div class="chips" id="simPkgs"></div>
+        </fieldset>
+        <div class="field">
+          <div class="field__row">
+            <label for="simTicket">Average spend per customer</label>
+            <div class="numbox"><span>$</span><input type="number" id="simTicketN" min="5" max="150" step="1" inputmode="decimal" aria-label="Average spend per customer, dollars"></div>
+          </div>
+          <input type="range" id="simTicket" min="5" max="150" step="1">
+        </div>
+        <div class="field">
+          <div class="field__row">
+            <label for="simMargin">Kept after food cost</label>
+            <div class="numbox"><input type="number" id="simMarginN" min="5" max="90" step="1" inputmode="decimal" aria-label="Percent of each sale you keep after food cost"><span>%</span></div>
+          </div>
+          <input type="range" id="simMargin" min="5" max="90" step="1">
+          <p class="hint">Rule of thumb: food cost runs around 30% of the price, so you keep about 70%. Your rent and staff are already paid, so this is what an extra customer adds. Change it to your real number.</p>
+        </div>
+        <p class="sim__mini" aria-hidden="true"><b id="simMini">0</b> new customers to cover it</p>
+      </div>
+      <div class="sim__out" aria-live="polite">
+        <p class="sim__label" id="simLabel">New customers per month to cover&nbsp;it</p>
+        <p class="sim__big"><span id="simBig">0</span></p>
+        <p class="sim__week" id="simWeekLine">That's about <b id="simWeek">0</b> a week, or <b id="simPerVideo">0</b> per video.</p>
+        <div class="plates" id="simPlates" aria-hidden="true"></div>
+        <details class="sim__how" id="simHow"><summary>How we calculate it</summary><p class="sim__formula" id="simFormula"></p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS + VOICES -->
+<section class="voices band band--night" id="voices">
+  <div class="wrap voices__head">
+    <div>
+      <p class="eyebrow">Restaurants we shoot for</p>
+      <h2>They came for <em>the video</em>.</h2>
+    </div>
+    <a class="btn btn--rosa btn--lg" href="contact.html">Book a shoot <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  <div class="logos"><ul class="logos__track" id="logosTrack" aria-label="Some of our clients"></ul></div>
+  <div class="quotes"><div class="quotes__track" id="quotesTrack"></div></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__top">
+    <a class="foot__logo" href="#top" aria-label="Arze Media, home"><img src="logo/arze-play-light.svg" alt="Arze Media" width="150" height="40" loading="lazy"></a>
+    <p class="foot__copy">© <span id="year"></span> Arze Media · <span data-copy="brand.city"></span></p>
+    <div class="foot__reach">
+      <a class="foot__wa" data-wa href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      <a class="foot__mail" data-mail href="#"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+    </div>
+  </div>
+
+</footer>
+
+<a class="fab" data-wa href="#" aria-label="Message Arze Media on WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+
+<!-- Video lightbox -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Video preview">
+  <button class="lightbox__close round" id="lbClose" aria-label="Close video"><svg class="ico"><use href="#i-x"/></svg></button>
+  <div class="lightbox__frame"><video id="lbVideo" playsinline controls loop></video></div>
+  <p class="lightbox__cap" id="lbCap"></p>
+</div>
+
+<!-- Icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.7-.3Z"/></symbol>
+  <symbol id="i-muted" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H2v6h4l5 4V5ZM23 9l-6 6M17 9l6 6"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H2v6h4l5 4V5ZM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 15 6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-swipe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M7 10l5-5 5 5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.1 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.8 2 11.5c0 2.4 1.2 4.6 3.1 6.1L4.5 21l4-2c1.1.3 2.3.5 3.5.5 5.5 0 10-3.8 10-8.5S17.5 3 12 3Z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path fill="currentColor" d="M13 4v4C6 9 3 14 2 20c2.5-3.5 6-5.1 11-5.1V19l9-7.5L13 4Z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18V5l12-2v13a3 3 0 1 1-2-2.8V6.3l-8 1.4V18a3 3 0 1 1-2-2.8Z"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m9 6-6 6 6 6M15 6l6 6-6 6"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7L8 5Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="12" cy="12" r="6.2" fill="none" stroke="var(--plate-ring, #FFFBF5)" stroke-width="1.4" opacity=".55"/></symbol>
+</svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/config.js?v=26"></script>
+<script src="js/main.js?v=26"></script>
+</body>
+</html>

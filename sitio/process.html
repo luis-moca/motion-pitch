@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Process · Arze Media</title>
+<meta name="description" content="One shoot day, a month of content. How working with Arze Media goes.">
+<meta name="theme-color" content="#16110F">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arze Media · Videos that fill tables">
+<meta property="og:description" content="Short-form video for Toronto restaurants. One shoot day, a month of Reels and TikToks.">
+<meta property="og:image" content="og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css?v=26">
+</head>
+<body data-page="how">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="index.html" aria-label="Arze Media, home">
+      <img src="logo/arze-play-light.svg" alt="Arze Media" width="150" height="40">
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="work.html">Work</a>
+      <a href="process.html" class="is-active" aria-current="page">Process</a>
+      <a href="menu.html">Menu</a>
+      <a href="math.html">The math</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="btn btn--rosa btn--sm nav__cta" href="contact.html">Book a shoot</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" hidden>
+  <nav class="dr__nav" aria-label="Mobile">
+    <a href="work.html"><span class="dr__n">01</span><span class="dr__t">Work<small>The formats</small></span><img src="assets/video/tacoplate.webp" alt="" loading="lazy"></a>
+    <a href="process.html" class="is-active" aria-current="page"><span class="dr__n">02</span><span class="dr__t">Process<small>How a shoot works</small></span><img src="assets/img/phonescreen-sm.webp" alt="" loading="lazy"></a>
+    <a href="menu.html"><span class="dr__n">03</span><span class="dr__t">Menu<small>Packages & prices</small></span><img src="assets/video/pasta.webp" alt="" loading="lazy"></a>
+    <a href="math.html"><span class="dr__n">04</span><span class="dr__t">The math<small>Will it pay off?</small></span><img src="assets/video/diner.webp" alt="" loading="lazy"></a>
+    <a href="faq.html"><span class="dr__n">05</span><span class="dr__t">FAQ<small>Good questions</small></span><img src="assets/video/counter.webp" alt="" loading="lazy"></a>
+    <a href="contact.html"><span class="dr__n">06</span><span class="dr__t">Contact<small>Book a shoot</small></span><img src="assets/video/latte.webp" alt="" loading="lazy"></a>
+  </nav>
+  <div class="dr__foot">
+    <a class="btn btn--rosa btn--lg" data-wa href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="btn btn--ghost btn--lg" data-mail href="#"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- HOW IT WORKS -->
+<section class="how band band--night" id="how">
+  <div class="how__pin">
+    <div class="wrap how__head">
+      <p class="eyebrow">Process</p>
+      <h2>One shoot day. <em>A&nbsp;month</em> of content.</h2>
+    </div>
+    <div class="how__track" id="howTrack"></div>
+    <div class="how__dots" id="howDots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- BACK -->
+<section class="band band--rosa faq__back">
+  <div class="wrap faq__backgrid">
+    <div>
+      <h2>One day.<br>A month of posts.</h2>
+      <div class="hero__ctas">
+        <a class="btn btn--ink btn--lg" href="menu.html">See the menu <span aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn--ghost btn--lg cta__wa" href="contact.html">Contact us</a>
+      </div>
+    </div>
+    <div class="strip" aria-hidden="true">
+      <div class="strip__tile"><video muted loop playsinline preload="none" data-src="assets/video/plating.mp4" poster="assets/video/plating.webp"></video></div>
+      <div class="strip__tile"><video muted loop playsinline preload="none" data-src="assets/video/latte.mp4" poster="assets/video/latte.webp"></video></div>
+      <div class="strip__tile"><video muted loop playsinline preload="none" data-src="assets/video/crowd.mp4" poster="assets/video/crowd.webp"></video></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__top">
+    <a class="foot__logo" href="index.html" aria-label="Arze Media, home"><img src="logo/arze-play-light.svg" alt="Arze Media" width="150" height="40" loading="lazy"></a>
+    <p class="foot__copy">© <span id="year"></span> Arze Media · <span data-copy="brand.city"></span></p>
+    <div class="foot__reach">
+      <a class="foot__wa" data-wa href="#"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      <a class="foot__mail" data-mail href="#"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+    </div>
+  </div>
+
+</footer>
+
+<a class="fab" data-wa href="#" aria-label="Message Arze Media on WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+
+<!-- Icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.7-.3Z"/></symbol>
+  <symbol id="i-muted" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H2v6h4l5 4V5ZM23 9l-6 6M17 9l6 6"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H2v6h4l5 4V5ZM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 15 6-6 6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-swipe" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M7 10l5-5 5 5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.1 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.8 2 11.5c0 2.4 1.2 4.6 3.1 6.1L4.5 21l4-2c1.1.3 2.3.5 3.5.5 5.5 0 10-3.8 10-8.5S17.5 3 12 3Z"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path fill="currentColor" d="M13 4v4C6 9 3 14 2 20c2.5-3.5 6-5.1 11-5.1V19l9-7.5L13 4Z"/></symbol>
+  <symbol id="i-save" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h12a1 1 0 0 1 1 1v19l-7-4.5L5 22V3a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18V5l12-2v13a3 3 0 1 1-2-2.8V6.3l-8 1.4V18a3 3 0 1 1-2-2.8Z"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m9 6-6 6 6 6M15 6l6 6-6 6"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7L8 5Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><circle cx="12" cy="12" r="6.2" fill="none" stroke="var(--plate-ring, #FFFBF5)" stroke-width="1.4" opacity=".55"/></symbol>
+</svg>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/config.js?v=26"></script>
+<script src="js/main.js?v=26"></script>
+</body>
+</html>
