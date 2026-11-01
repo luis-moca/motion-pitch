@@ -1002,3 +1002,17 @@ body:not([data-page="home"]) main > .band:first-child { padding-top: calc(clamp(
   .field__row { gap: 8px; }
   .field label { white-space: nowrap; }
 }
+
+/* ---------- Desktop hero: copy and phone as one centered group (no empty middle) ---------- */
+@media (min-width: 960px) {
+  .hero__grid { grid-template-columns: minmax(0, auto) auto; justify-content: center; column-gap: clamp(48px, 7vw, 120px); max-width: 1240px; }
+  .hero__copy { max-width: 640px; }
+}
+/* Closing band: tilted tiles never push the page sideways */
+.faq__back { overflow: hidden; }
+@media (max-width: 899px) { .strip { gap: 10px; } .strip__tile { width: calc((100vw - 32px - 20px) / 3 - 6px); max-width: 150px; } }
+/* Calculator on narrow Androids (360 px): drop the intro line so it fits one screen */
+@media (max-width: 380px) {
+  #math .lead { display: none; }
+  .sim__big { font-size: 64px; }
+}
