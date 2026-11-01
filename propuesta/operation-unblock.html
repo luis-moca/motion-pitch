@@ -237,8 +237,13 @@ body.light .fx--scan{opacity:.5}
 #s5 .flow div{opacity:0}
 
 /* ---------- S6 math ---------- */
-#s6 .grid{position:absolute;left:calc(16px + var(--u)*5);top:calc(var(--u)*9);width:min(50vw,calc(var(--u)*66));display:grid;grid-template-columns:repeat(10,1fr);gap:calc(var(--u)*.6)}
-#s6 .t{aspect-ratio:4/5;border-radius:4px;background:#ccc center/cover;opacity:0;box-shadow:0 6px 14px rgba(0,0,0,.18)}
+#s6 .grid{position:absolute;left:calc(16px + var(--u)*5);top:calc(var(--u)*8.4);width:min(36vw,calc(var(--u)*40));display:grid;grid-template-columns:repeat(10,1fr);gap:calc(var(--u)*.6)}
+#s6 .t{position:relative;aspect-ratio:9/12;border-radius:5px;background:linear-gradient(160deg,#1B1530,#07080D);opacity:0;box-shadow:0 6px 14px rgba(7,8,13,.18);display:grid;place-items:center;overflow:hidden}
+#s6 .t:nth-child(3n+1){background:linear-gradient(160deg,#2A1F5C,#0E0B1E)}
+#s6 .t:nth-child(5n+2){background:linear-gradient(160deg,#7B5CFF,#3A2A8C)}
+#s6 .t svg{width:34%;fill:#F4F1EA;opacity:.9}
+#s6 .t b{position:absolute;left:8%;top:6%;font-family:var(--disp);font-weight:800;font-size:max(9px,calc(var(--u)*.75));color:rgba(244,241,234,.7)}
+#s6 .t em{position:absolute;right:8%;bottom:6%;font-style:normal;font-family:var(--disp);font-weight:700;font-size:max(9px,calc(var(--u)*.7));color:#C8FF00}
 #s6 .gcap{grid-column:1/-1;font-family:var(--mono);font-size:max(12px,calc(var(--u)*1));letter-spacing:.14em;color:rgba(7,8,13,.6);margin-top:.6em;opacity:0}
 #s6 .rp{position:absolute;right:calc(16px + var(--u)*5);top:calc(var(--u)*8);width:calc(var(--u)*36);display:flex;flex-direction:column;align-items:flex-end;gap:calc(var(--u)*1.4)}
 #s6 .bars{height:calc(var(--u)*22);display:flex;gap:calc(var(--u)*2.4);align-items:flex-end}
@@ -862,7 +867,8 @@ const cal = $("#cal");
 const days = $$(".d", cal);
 
 const tiles = $("#tiles");
-for (let i = 0; i < 40; i++) tiles.insertBefore(Object.assign(document.createElement("i"), { className: "t", style: `background-image:url(${POSTERS[(i * 7) % POSTERS.length]})` }), $("#gcap"));
+const DUR = [12, 9, 15, 11, 14, 8, 13, 10];
+for (let i = 0; i < 40; i++) { const t = document.createElement("i"); t.className = "t"; t.innerHTML = `<svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg><b>${String(i + 1).padStart(2, "0")}</b><em>0:${String(DUR[i % 8]).padStart(2, "0")}</em>`; tiles.insertBefore(t, $("#gcap")); }
 $("#vault").innerHTML = Array.from({ length: 8 }, (_, i) => `<i style="background-image:url(${POSTERS[(i * 4 + 2) % POSTERS.length]})"></i>`).join("");
 
 /* funnel cards */
