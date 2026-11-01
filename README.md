@@ -1,4 +1,5 @@
 # Motion Pitch
 
-An animated, cinematic pitch for a short-form video studio, plus the studio's website.
+An animated, cinematic pitch for a marketing agency stuck on a production bottleneck, plus the studio's new website.
+
 Live: https://luis-moca.github.io/motion-pitch
