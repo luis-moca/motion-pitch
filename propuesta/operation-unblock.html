@@ -70,6 +70,19 @@ body.light .fx--scan{opacity:.5}
 #gate h1 span{color:var(--lime)}
 #gate button{font-family:var(--mono);font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:max(12px,calc(var(--u)*1.3));padding:1.1em 2.2em;border:2px solid var(--lime);color:var(--ink);background:var(--lime);clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);transition:transform .2s}
 #gate button:hover{transform:scale(1.04)}
+#gate .cta{position:relative;display:inline-block;margin-top:.4em;animation:ctaBeat 1.6s ease-in-out infinite}
+#gate .cta::before,#gate .cta::after{content:"";position:absolute;inset:-2px;border:2px solid var(--lime);border-radius:4px;opacity:0;animation:ctaRing 1.6s ease-out infinite;pointer-events:none}
+#gate .cta::after{animation-delay:.8s}
+#gate #start{position:relative;overflow:hidden;box-shadow:0 0 0 rgba(200,255,0,0)}
+#gate #start::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:ctaShine 2.4s ease-in-out infinite}
+#gate .cta-glow{position:absolute;inset:-18px;border-radius:20px;background:radial-gradient(closest-side,rgba(200,255,0,.45),transparent);filter:blur(10px);z-index:-1;animation:ctaGlow 1.6s ease-in-out infinite}
+#gate .cta-hint{display:block;margin-top:1.1em;font-family:var(--disp);font-weight:700;font-size:max(12px,calc(var(--u)*1.1));letter-spacing:.14em;text-transform:uppercase;color:var(--lime);animation:ctaHint 1.6s ease-in-out infinite}
+@keyframes ctaBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes ctaRing{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.35,1.9)}}
+@keyframes ctaShine{0%,55%{left:-60%}100%{left:130%}}
+@keyframes ctaGlow{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes ctaHint{0%,100%{opacity:.55;transform:translateY(0)}50%{opacity:1;transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){#gate .cta,#gate .cta::before,#gate .cta::after,#gate #start::after,#gate .cta-glow,#gate .cta-hint{animation:none}}
 #gate p{font-family:var(--mono);font-size:max(12px,calc(var(--u)*1));color:var(--dim);letter-spacing:.14em;margin-top:2.2em;text-transform:uppercase}
 #gate.gone{opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s}
 
@@ -628,7 +641,8 @@ input[type=range]:focus-visible{outline:2px solid var(--cyan);outline-offset:6px
   <div>
     <p class="k">Arze Media · Toronto</p>
     <h1 class="mega">Operation:<br><span>Unblock</span></h1>
-    <button id="start" type="button">▶ Start briefing</button>
+    <span class="cta"><i class="cta-glow"></i><button id="start" type="button">▶ Start briefing</button></span>
+    <span class="cta-hint">↑ Click to start · or press Enter</span>
     <p>Space play/pause · ← → chapters · scroll to scrub · F full screen</p>
   </div>
 </div>
@@ -1258,7 +1272,10 @@ P.buildLogo();
 tagType();
 root.dataset.font = "c";
 enter(0); sync(); requestAnimationFrame(loop);
-$("#start").addEventListener("click", () => { $("#gate").classList.add("gone"); play(); wake(); });
+const begin = () => { if ($("#gate").classList.contains("gone")) return; $("#gate").classList.add("gone"); play(); wake(); };
+$("#start").addEventListener("click", begin);
+addEventListener("keydown", (e) => { if (!$("#gate").classList.contains("gone") && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); begin(); } });
+setTimeout(() => $("#start").focus({ preventScroll: true }), 300);
 const jump = /#t=([\d.]+)/.exec(location.hash); if (jump) { $("#gate").classList.add("gone"); seek(+jump[1], false); }
 const scaleFrames = () => { $("#lapScr iframe").style.transform = `scale(${$("#lapScr").clientWidth / 1440})`; };
 scaleFrames(); addEventListener("resize", scaleFrames);
