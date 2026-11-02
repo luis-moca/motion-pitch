@@ -5,4 +5,5 @@ An animated, cinematic pitch for a marketing agency stuck on a production bottle
 ![Operation: Unblock](cover.png)
 
 Live: luis-moca.github.io/motion-pitch/
+
 Website: https://arze-media.pages.dev
